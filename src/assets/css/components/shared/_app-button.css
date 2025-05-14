@@ -1,0 +1,40 @@
+.app-button {
+    min-height: 55px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    color: var(--clr-grey-15);
+    background-color: var(--clr-green-70);
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    padding: 10px 24px;
+    transition: background-color 0.3s ease;
+    @media (max-width: 1770px) {
+        min-height: 45px;
+        padding: 10px 16px;
+    }
+
+    &:hover {
+        background-color: var(--clr-green-75);
+    }
+
+    &.primary {
+        color: var(--clr-white);
+        background-color: var(--clr-blue-70);
+
+        &:hover {
+            background-color: var(--clr-blue-50);
+        }
+    }
+
+    &.secondary {
+        color: var(--clr-white);
+        background-color: var(--clr-gray-70);
+
+        &:hover {
+            background-color: var(--clr-gray-50);
+        }
+    }
+}

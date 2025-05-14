@@ -1,0 +1,34 @@
+@font-face {
+    font-family: "Urbanist";
+    src: url("/fonts/urbanist/Urbanist-Regular.ttf") format("truetype");
+    font-display: swap;
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "Urbanist";
+    src: url("/fonts/urbanist/Urbanist-Medium.ttf") format("truetype");
+    font-display: swap;
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: "Urbanist";
+    src: url("/fonts/urbanist/Urbanist-SemiBold.ttf") format("truetype");
+    font-display: swap;
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: "Urbanist";
+    src: url("/fonts/urbanist/Urbanist-Bold.ttf") format("truetype");
+    font-display: swap;
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: "Urbanist";
+    src: url("/fonts/urbanist/Urbanist-ExtraBold.ttf") format("truetype");
+    font-display: swap;
+    font-weight: 800;
+}

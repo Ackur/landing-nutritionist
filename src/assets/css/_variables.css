@@ -1,0 +1,38 @@
+:root {
+    --clr-black: #000;
+    --clr-white: #fff;
+
+    --clr-green-70: #cbea7b;
+    --clr-green-75: #d3ee91;
+    --clr-green-80: #dcf1a7;
+    --clr-green-85: #e5f5bd;
+    --clr-green-90: #eef8d3;
+    --clr-green-95: #f6fbe9;
+    --clr-green-97: #fafdf2;
+    --clr-green-99: #fdfefb;
+
+    --clr-green-dark-15: #1a3129;
+    --clr-green-dark-20: #234338;
+    --clr-green-dark-25: #2c5446;
+    --clr-green-dark-30: #346454;
+    --clr-green-dark-40: #468671;
+    --clr-green-dark-60: #79b9a4;
+    --clr-green-dark-80: #bcdcd1;
+    --clr-green-dark-90: #ddede8;
+
+    --clr-grey-10: #191919;
+    --clr-grey-15: #262626;
+    --clr-grey-20: #333333;
+    --clr-grey-30: #4c4c4d;
+    --clr-grey-35: #59595a;
+    --clr-grey-40: #656567;
+    --clr-grey-60: #98989a;
+    --clr-grey-90: #e6e6e6;
+    --clr-grey-95: #f2f2f2;
+    --clr-grey-97: #f7f7f7;
+    --clr-grey-99: #fcfcfc;
+}
+
+:root {
+    --ff-urbanist: "Urbanist", sans-serif;
+}
