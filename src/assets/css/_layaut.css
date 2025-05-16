@@ -94,6 +94,9 @@ body:has(.app-main) {
             border: 1px solid var(--clr-green-dark-25);
             border-radius: 6px;
             overflow: clip;
+            @media (max-width: 1770px) {
+                min-height: 40px;
+            }
 
             &::before,
             &::after {
@@ -167,16 +170,18 @@ body:has(.app-main) {
     }
 
     .app-footer__bottom {
+        min-height: 87px;
         display: flex;
         align-items: center;
         justify-content: space-between;
         border: 1px solid var(--clr-green-dark-25);
         border-radius: 8px;
         background-color: var(--clr-green-dark-20);
-        padding: 16px 20px;
+        padding: 0 20px;
         margin-top: 50px;
         @media (max-width: 1770px) {
-            padding: 14px 16px;
+            min-height: 76px;
+            padding: 0 16px;
             margin-top: 40px;
         }
 

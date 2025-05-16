@@ -1,5 +1,6 @@
 @import "_fonts.css";
 @import "_variables.css";
 @import "_init.css";
+@import "_global.css";
 @import "_layaut.css";
 @import "components/shared/index.css";
