@@ -4,7 +4,7 @@
     justify-content: center;
 
     .hero-section__picture {
-        min-width: 949px;
+        min-width: fit-content;
 
         .hero-section__picture--image {
         }
@@ -13,17 +13,32 @@
     .hero-section__content {
         display: flex;
         align-items: center;
-        padding-left: 50px;
+        padding: 0 50px;
+
+        @media (max-width: 1770px) {
+            padding: 0 40px;
+        }
 
         .hero-section__content--container {
             max-width: 759px;
+
+            @media (max-width: 1770px) {
+                max-width: 610px;
+            }
         }
 
         .content-subtitle {
+            width: fit-content;
             font-size: 28px;
             font-weight: 600;
             color: var(--clr-green-dark-15);
+            border-bottom: 3px solid var(--clr-green-70);
             margin-bottom: 24px;
+
+            @media (max-width: 1770px) {
+                font-size: 22px;
+                margin-bottom: 10px;
+            }
         }
 
         .content-title {
@@ -32,17 +47,38 @@
             line-height: 1.2;
             margin-bottom: 20px;
             color: var(--clr-green-dark-15);
+
+            @media (max-width: 1770px) {
+                font-size: 48px;
+                margin-bottom: 16px;
+            }
         }
 
         .content-description {
             font-weight: 500;
             margin-bottom: 50px;
+
+            @media (max-width: 1770px) {
+                margin-bottom: 40px;
+            }
         }
 
         .content-actions {
             display: flex;
             gap: 20px;
             margin-bottom: 70px;
+
+            @media (max-width: 1770px) {
+                margin-bottom: 50px;
+            }
+
+            .content-actions--item {
+                min-height: 59px;
+                @media (max-width: 1770px) {
+                    font-size: 14px;
+                    min-height: 49px;
+                }
+            }
         }
 
         .content-tags {
@@ -50,10 +86,18 @@
             align-items: center;
             gap: 8px;
 
+            @media (max-width: 1770px) {
+                gap: 6px;
+            }
+
             .content-tags--label {
                 font-size: 20px;
                 font-weight: 600;
                 color: var(--clr-green-dark-20);
+
+                @media (max-width: 1770px) {
+                    font-size: 18px;
+                }
 
                 span {
                     font-weight: 700;

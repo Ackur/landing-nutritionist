@@ -6,6 +6,9 @@
     border: 1px solid var(--clr-green-70);
     border-radius: 35px;
     padding: 8px 10px;
+    @media (max-width: 1770px) {
+        padding: 6px 8px;
+    }
 
     img {
         position: relative;
@@ -13,13 +16,35 @@
         height: 50px;
         border-radius: 50%;
         object-fit: cover;
+        will-change: scale, z-index;
+        transition: scale 0.3s;
 
-        &:not(:first-child) {
-            margin-left: -20px;
+        @media (max-width: 1770px) {
+            width: 40px;
+            height: 40px;
         }
 
         &:hover {
-            z-index: 1;
+            scale: 1.05;
+            z-index: 100;
         }
+
+        &:not(:hover) {
+            animation: zIndexHack 0.305s;
+        }
+
+        &:not(:first-child) {
+            margin-left: -20px;
+            @media (max-width: 1770px) {
+                margin-left: -17px;
+            }
+        }
+    }
+}
+
+@keyframes zIndexHack {
+    0%,
+    100% {
+        z-index: 100;
     }
 }

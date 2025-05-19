@@ -6,6 +6,7 @@
     font-weight: 700;
     color: var(--clr-grey-15);
     background-color: var(--clr-green-70);
+    border: 1px solid transparent;
     border-radius: 5px;
     text-align: center;
     text-decoration: none;
@@ -16,25 +17,19 @@
         padding: 10px 16px;
     }
 
-    &:hover {
-        background-color: var(--clr-green-75);
+    &:hover:not(.outline) {
+        background-image: url(/images/icons/abstract-1-icon.svg);
+        background-color: var(--clr-green-85);
+        background-size: contain;
     }
 
-    &.primary {
-        color: var(--clr-white);
-        background-color: var(--clr-blue-70);
+    &.outline {
+        border-color: var(--clr-green-85);
+        background-color: var(--clr-green-95);
 
         &:hover {
-            background-color: var(--clr-blue-50);
-        }
-    }
-
-    &.secondary {
-        color: var(--clr-white);
-        background-color: var(--clr-gray-70);
-
-        &:hover {
-            background-color: var(--clr-gray-50);
+            border-color: var(--clr-green-75);
+            background-color: var(--clr-green-85);
         }
     }
 }
