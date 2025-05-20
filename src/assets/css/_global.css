@@ -1,4 +1,36 @@
-.cantainer-lg {
+.app-container-lg {
     max-width: 1920px;
     margin: 0 auto;
+}
+
+.app-container {
+    max-width: 1636px;
+    padding: 0 20px;
+    margin: 0 auto;
+    @media (max-width: 1770px) {
+        max-width: 1320px;
+    }
+}
+
+.text-center {
+    text-align: center;
+}
+
+.app-section-title {
+    font-size: 48px;
+    font-weight: 700;
+    color: var(--clr-grey-15);
+    @media (max-width: 1770px) {
+        font-size: 38px;
+    }
+
+    &:has(+ .app-section-description) {
+        margin-bottom: 10px;
+        @media (max-width: 1770px) {
+            margin-bottom: 6px;
+        }
+    }
+}
+.app-section-description {
+    font-weight: 500;
 }

@@ -2,12 +2,14 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-bottom: 150px;
+
+    @media (max-width: 1770px) {
+        margin-bottom: 100px;
+    }
 
     .hero-section__picture {
         min-width: fit-content;
-
-        .hero-section__picture--image {
-        }
     }
 
     .hero-section__content {
@@ -104,6 +106,30 @@
                     color: var(--clr-green-dark-40);
                 }
             }
+        }
+    }
+}
+
+.features-section {
+    margin-bottom: 150px;
+
+    @media (max-width: 1770px) {
+        margin-bottom: 100px;
+    }
+
+    .features-section__heading {
+        margin-bottom: 80px;
+        @media (max-width: 1770px) {
+            margin-bottom: 60px;
+        }
+    }
+
+    .features-section__cards {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(200px, 1fr));
+        gap: 30px;
+        @media (max-width: 1770px) {
+            gap: 20px;
         }
     }
 }

@@ -1,0 +1,53 @@
+.app-card-default {
+    border: 1px solid var(--clr-green-85);
+    border-radius: 12px;
+    background-color: var(--clr-green-95);
+    padding: 40px 50px;
+    @media (max-width: 1770px) {
+        padding: 40px;
+    }
+
+    .app-card-default--title {
+        font-size: 24px;
+        font-weight: 600;
+        color: var(--clr-grey-15);
+        margin-bottom: 24px;
+        @media (max-width: 1770px) {
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+
+        &:has(.app-card-default--icon-container) {
+            display: flex;
+            align-items: center;
+        }
+    }
+
+    .app-card-default--description {
+        font-weight: 500;
+    }
+
+    .app-card-default--icon-container {
+        height: 68px;
+        width: 68px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 8px;
+        background-color: var(--clr-green-70);
+        margin-right: 14px;
+        @media (max-width: 1770px) {
+            width: 54px;
+            height: 54px;
+            margin-right: 8px;
+        }
+    }
+
+    .app-card-default--icon {
+        color: var(--clr-grey-15);
+        @media (max-width: 1770px) {
+            width: 30px;
+            height: 30px;
+        }
+    }
+}
