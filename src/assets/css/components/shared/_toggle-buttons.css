@@ -1,0 +1,33 @@
+.toggle-buttons {
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    border: 1px solid var(--clr-green-80);
+    border-radius: 8px;
+    padding: 10px;
+
+    .toggle-buttons--item {
+        height: 46px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 6px;
+        color: var(--clr-grey-30);
+        font-weight: 600;
+        padding: 10px 24px;
+        cursor: pointer;
+        @media (max-width: 1770px) {
+            height: 41px;
+            font-size: 14px;
+        }
+
+        &:has(:checked) {
+            background-color: var(--clr-green-dark-20);
+            color: var(--clr-white);
+        }
+
+        input[type="radio"] {
+            appearance: none;
+        }
+    }
+}

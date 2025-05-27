@@ -57,6 +57,7 @@
         padding: 20px;
         @media (max-width: 1770px) {
             gap: 14px;
+            padding: 16px;
         }
 
         .app-card-blog__author-info--avatar {

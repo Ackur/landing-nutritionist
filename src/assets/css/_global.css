@@ -32,5 +32,7 @@
     }
 }
 .app-section-description {
+    max-width: 780px;
     font-weight: 500;
+    margin: auto;
 }
