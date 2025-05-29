@@ -103,7 +103,7 @@
 
                 span {
                     font-weight: 700;
-                    color: var(--clr-green-dark-40);
+                    color: var(--clr-green-dark-35);
                 }
             }
         }
@@ -197,13 +197,13 @@
             border-radius: 12px;
             background-color: var(--clr-green-97);
 
-            .item-main {
+            .item-content {
                 padding: 40px;
                 @media (max-width: 1770px) {
                     padding: 30px;
                 }
 
-                .item-main--icon {
+                .item-content--icon {
                     color: var(--clr-green-dark-30);
                     margin-bottom: 50px;
                     @media (max-width: 1770px) {

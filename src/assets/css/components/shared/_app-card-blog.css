@@ -9,14 +9,14 @@
         padding: 30px;
     }
 
-    .app-card-blog__main {
+    .app-card-blog__content {
         margin-bottom: 30px;
         @media (max-width: 1770px) {
             margin-bottom: 20px;
         }
     }
 
-    .app-card-blog__main--image {
+    .app-card-blog__content--image {
         border-radius: 12px;
         object-fit: cover;
         margin-bottom: 40px;
@@ -27,11 +27,11 @@
         }
     }
 
-    .app-card-blog__main--category {
+    .app-card-blog__content--category {
         font-weight: 500;
     }
 
-    .app-card-blog__main--title {
+    .app-card-blog__content--title {
         font-size: 26px;
         font-weight: 600;
         color: var(--clr-grey-15);
@@ -42,7 +42,7 @@
         }
     }
 
-    .app-card-blog__main--description {
+    .app-card-blog__content--description {
         font-weight: 500;
         color: var(--clr-grey-30);
     }
