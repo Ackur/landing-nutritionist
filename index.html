@@ -485,9 +485,9 @@
           </p>
         </article>
 
-        <div class="feedback-section__cards">
-          <div class="feedback-section__cards--content">
-            <article class="feedback-section__cards--item">
+        <div data-slider class="feedback-section__cards">
+          <div data-slider-content class="feedback-section__cards--content">
+            <article data-slider-item class="feedback-section__cards--item">
               <div class="item-content">
                 <svg width="40" height="40" class="item-content--icon">
                   <use href="images/icons/icons-symbol.svg#quotes-icon" />
@@ -516,7 +516,8 @@
                 </div>
               </footer>
             </article>
-            <article class="feedback-section__cards--item">
+
+            <article data-slider-item class="feedback-section__cards--item">
               <div class="item-content">
                 <svg width="40" height="40" class="item-content--icon">
                   <use href="images/icons/icons-symbol.svg#quotes-icon" />
@@ -541,7 +542,8 @@
                 </div>
               </footer>
             </article>
-            <article class="feedback-section__cards--item">
+
+            <article data-slider-item class="feedback-section__cards--item">
               <div class="item-content">
                 <svg width="40" height="40" class="item-content--icon">
                   <use href="images/icons/icons-symbol.svg#quotes-icon" />
@@ -573,13 +575,14 @@
             <button
               type="button"
               aria-label="cards pagination left button"
+              data-slider-control="prev"
               class="pagination-control app-button outline"
             >
               <svg width="34" height="34" class="pagination-control--icon">
                 <use href="images/icons/icons-symbol.svg#arrow-left-simple-icon" />
               </svg>
             </button>
-            <ul class="pagination-list">
+            <ul data-slider-pagination class="pagination-list">
               <li class="pagination-list--item active"></li>
               <li class="pagination-list--item"></li>
               <li class="pagination-list--item"></li>
@@ -589,6 +592,7 @@
             <button
               type="button"
               aria-label="cards pagination right button"
+              data-slider-control="next"
               class="pagination-control app-button outline"
             >
               <svg width="34" height="34" class="pagination-control--icon">

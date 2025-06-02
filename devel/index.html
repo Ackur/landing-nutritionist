@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <base href="%BASE_URL%" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Project icons</title>
+
+    <link rel="stylesheet" href="src/assets/css/index.css" />
+    <link rel="stylesheet" href="src/assets/css/pages/devel.css" />
+  </head>
+
+  <body>
+    <section class="app-devel">
+      <h1>Project icons</h1>
+      <p>Here are the icons used in the project:</p>
+      <h2>SVG sprite icons:</h2>
+      <br />
+      <ul class="app-icons" data-app-icons>
+        <!-- <li class="app-icons__item">
+          <svg width="34" height="34" class="pagination-control--icon">
+            <use href="images/icons/icons-symbol.svg#arrow-right-simple-icon" />
+          </svg>
+          <span>name</span>
+        </li> -->
+      </ul>
+      <div class="code-example">
+        <h2>How to use:</h2>
+        <pre>
+            <code>
+                &lt;template&gt;
+                    &lt;svg width="24px" height="24px" fill="red"&gt;
+                        &lt;use href="/images/icons/icons-symbol.svg#update" /&gt;
+                    &lt;/svg&gt;
+                &lt;/template&gt;
+            </code>
+        </pre>
+      </div>
+    </section>
+
+    <script src="src/js/pages/devel.js" type="module"></script>
+  </body>
+</html>
