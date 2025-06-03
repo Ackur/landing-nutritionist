@@ -10,6 +10,9 @@
     @media (max-width: 1770px) {
         max-width: 1320px;
     }
+    @media (max-width: 1024px) {
+        padding: 0 16px;
+    }
 }
 
 .text-center {
@@ -22,6 +25,9 @@
     color: var(--clr-grey-15);
     @media (max-width: 1770px) {
         font-size: 38px;
+    }
+    @media (max-width: 1024px) {
+        font-size: 28px;
     }
 
     &:has(+ .app-section-description) {

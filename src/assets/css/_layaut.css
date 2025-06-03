@@ -1,3 +1,9 @@
+@property --_scroll-persentage {
+    syntax: "<percentage>";
+    initial-value: 0%;
+    inherits: true;
+}
+
 body:has(.app-main) {
     --_content-width: 1600px;
     @media (max-width: 1770px) {
@@ -23,6 +29,9 @@ body:has(.app-main) {
         @media (max-width: 1770px) {
             gap: 20px;
         }
+        @media (max-width: 1024px) {
+            gap: 16px;
+        }
 
         .app-navbar__list--item {
             @media (max-width: 1770px) {
@@ -43,6 +52,8 @@ body:has(.app-main) {
 }
 
 .app-button-top {
+    --_btn-top-opacity: 0.7;
+
     position: fixed;
     bottom: 100px;
     right: 20px;
@@ -53,18 +64,29 @@ body:has(.app-main) {
     justify-content: center;
     gap: 20px;
     color: var(--clr-white);
-    opacity: 0.7;
-    transition: opacity 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+
     @media (max-width: 1770px) {
         gap: 16px;
     }
-
-    &[hidden] {
-        display: none;
+    @media (max-width: 1024px) {
+        gap: 10px;
+        font-size: 16px;
     }
 
-    &:hover {
-        opacity: 1;
+    &[hidden] {
+        opacity: 0;
+        transform: scale(0);
+        visibility: hidden;
+        user-select: none;
+        pointer-events: none;
+    }
+    &:not([hidden]) {
+        opacity: var(--_btn-top-opacity);
+        transform: scale(1);
+        &:hover {
+            --_btn-top-opacity: 1;
+        }
     }
 
     .app-button-top--icon-container {
@@ -87,7 +109,7 @@ body:has(.app-main) {
             position: absolute;
             inset: -5px;
             border-radius: 32px;
-            background: conic-gradient(from 0deg, var(--clr-green-dark-80) var(--_persentage), transparent 0);
+            background-image: conic-gradient(from 0deg, var(--clr-green-dark-80) var(--_scroll-persentage), transparent 0);
             background-color: var(--clr-green-dark-40);
             z-index: -1;
         }
@@ -101,12 +123,26 @@ body:has(.app-main) {
     .app-navbar {
         max-width: var(--_content-width);
         margin: auto;
+
+        nav {
+            @media (max-width: 768px) {
+                display: none;
+            }
+        }
     }
 
     .app-header__top {
+        @media (max-width: 768px) {
+            overflow: clip;
+        }
+
         &:has(.baner:not(:empty)) {
             border-bottom: 1px solid var(--clr-green-dark-20);
             padding: 14px 20px;
+
+            @media (max-width: 768px) {
+                padding: 14px 16px;
+            }
         }
 
         .baner {
@@ -118,40 +154,79 @@ body:has(.app-main) {
             font-size: 16px;
             color: var(--clr-white);
             font-weight: 500;
-            background-color: var(--clr-green-dark-20);
             border: 1px solid var(--clr-green-dark-25);
             border-radius: 6px;
             overflow: clip;
+            z-index: 1;
             @media (max-width: 1770px) {
                 min-height: 40px;
+            }
+            @media (max-width: 1024px) {
+                font-size: 14px;
+            }
+            @media (max-width: 768px) {
+                width: fit-content;
+                padding: 10px;
+                overflow: visible;
             }
 
             &::before,
             &::after {
                 content: url("/images/icons/abstract-1-icon.svg");
-                display: block;
                 position: absolute;
-                width: 200px;
-                height: 100%;
+                width: 144px;
+                height: 74px;
+                @media (max-width: 768px) {
+                    z-index: -2;
+                }
             }
             &::before {
+                top: -40%;
                 left: 3%;
+                @media (max-width: 768px) {
+                    top: 45%;
+                    left: -20%;
+                }
             }
             &::after {
+                bottom: -40%;
                 right: 3%;
                 transform: rotateX(180deg);
+
+                @media (max-width: 768px) {
+                    bottom: unset;
+                    top: 45%;
+                    right: -20%;
+                }
+            }
+
+            .baner--backgraund {
+                position: absolute;
+                inset: 0;
+                border-radius: 6px;
+                background-color: var(--clr-green-dark-20);
+                z-index: -1;
             }
 
             .baner__link {
                 display: flex;
                 align-items: center;
+                text-align: center;
 
                 .baner__link--icon {
+                    @media (max-width: 1024px) {
+                        width: 20px;
+                        min-width: 20px;
+                        height: 20px;
+                    }
                     &.prepend {
                         margin-right: 6px;
                     }
                     &.append {
                         margin-left: 20px;
+                        @media (max-width: 1024px) {
+                            margin-left: 6px;
+                        }
                     }
                 }
             }
@@ -184,6 +259,9 @@ body:has(.app-main) {
     @media (max-width: 1770px) {
         padding: 40px 20px;
     }
+    @media (max-width: 1024px) {
+        padding: 30px 16px;
+    }
 
     .app-navbar__logo--image {
         @media (max-width: 1770px) {
@@ -197,11 +275,40 @@ body:has(.app-main) {
         max-width: var(--_content-width);
         margin: auto;
 
-        .app-navbar__list {
-            position: absolute;
-            left: 50%;
-            top: 50%;
-            transform: translate(-50%, -50%);
+        .app-navbar {
+            flex-wrap: wrap;
+
+            nav {
+                @media (max-width: 768px) {
+                    order: 1;
+                    width: 100%;
+                }
+
+                .app-navbar__list {
+                    flex-wrap: wrap;
+                }
+            }
+        }
+
+        .app-button-top {
+            --_btn-top-opacity: 1;
+
+            position: static;
+            left: unset;
+            top: unset;
+            transform: unset;
+
+            .app-button-top--icon-container {
+                &::before {
+                    transition: all 0.3s ease-in-out;
+                }
+
+                .app-button-top:hover & {
+                    &::before {
+                        background-color: var(--clr-green-70);
+                    }
+                }
+            }
         }
     }
 
@@ -210,6 +317,7 @@ body:has(.app-main) {
         display: flex;
         align-items: center;
         justify-content: space-between;
+        gap: 16px;
         border: 1px solid var(--clr-green-dark-25);
         border-radius: 8px;
         background-color: var(--clr-green-dark-20);
@@ -220,6 +328,12 @@ body:has(.app-main) {
             padding: 0 16px;
             margin-top: 40px;
         }
+        @media (max-width: 1024px) {
+            justify-content: center;
+            flex-wrap: wrap;
+            padding: 20px;
+            margin-top: 30px;
+        }
 
         .app-footer__contacts {
             .app-footer__contacts--list {
@@ -228,6 +342,10 @@ body:has(.app-main) {
                 gap: 20px;
                 @media (max-width: 1770px) {
                     gap: 16px;
+                }
+                @media (max-width: 768px) {
+                    flex-wrap: wrap;
+                    justify-content: center;
                 }
 
                 .list-item {
@@ -242,11 +360,27 @@ body:has(.app-main) {
                         padding: 10px 12px;
                     }
 
+                    @media (max-width: 700px) {
+                        width: 100%;
+                        justify-content: center;
+                    }
+
                     .list-item__link {
                         display: flex;
                         align-items: center;
                         gap: 6px;
                         color: var(--clr-white);
+                        @media (max-width: 1024px) {
+                            gap: 4px;
+                            font-size: 16px;
+                        }
+
+                        .list-item__link--icon {
+                            @media (max-width: 1024px) {
+                                width: 20px;
+                                height: 20px;
+                            }
+                        }
                     }
                 }
             }

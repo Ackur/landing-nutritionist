@@ -67,8 +67,8 @@ export class CustomSlider {
       },
       {
         root: this.elements.content,
-        rootMargin: ' 0px -80% 0px 0px ', // top right bottom left
-        threshold: 0.4
+        rootMargin: ' 0px -70% 0px 0px ', // top right bottom left
+        threshold: 0.2
       }
     );
 

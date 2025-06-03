@@ -1,8 +1,11 @@
 export class ButtonTop {
   elements = {};
+  defaultOptions = { offsetTop: 0, offsetBottom: 100 };
+  options = {};
 
-  constructor(targetSelector) {
+  constructor(targetSelector, options = this.defaultOptions) {
     this.elements.button = document.querySelector(targetSelector);
+    Object.assign(this.options, this.defaultOptions, options);
   }
 
   goToTop = () => {
@@ -10,14 +13,15 @@ export class ButtonTop {
   };
 
   culculateButtonPropertis = () => {
-    const showGap = 200;
+    const { offsetTop, offsetBottom } = this.options;
     const scrollTop = document.body.scrollTop || document.documentElement.scrollTop;
     const offsetHeight = document.body.offsetHeight || document.documentElement.offsetHeight;
     const clientHeight = document.documentElement.clientHeight;
-    const scrollPersentage = (scrollTop / (offsetHeight - clientHeight)) * 100;
+    const scrollPersentage = Math.floor((scrollTop / (offsetHeight - clientHeight)) * 100);
 
-    this.elements.button.style.setProperty('--_persentage', scrollPersentage + '%');
-    if (scrollTop > showGap) {
+    this.elements.button.style.setProperty('--_scroll-persentage', scrollPersentage + '%');
+
+    if (scrollPersentage >= offsetTop && scrollPersentage <= offsetBottom) {
       this.elements.button.hidden = false;
     } else {
       this.elements.button.hidden = true;
@@ -27,6 +31,7 @@ export class ButtonTop {
   init() {
     this.elements.button.addEventListener('click', this.goToTop);
     window.addEventListener('scroll', this.culculateButtonPropertis);
+    this.culculateButtonPropertis();
   }
 
   destroy() {

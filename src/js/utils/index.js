@@ -1,6 +1,4 @@
 export function closestElement(selector, el = this) {
-  console.log({ el });
-
   return (
     (el && el != document && el != window && el.closest(selector)) ||
     (el && closestElement(selector, el.getRootNode().host))

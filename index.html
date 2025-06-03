@@ -18,6 +18,7 @@
     <header class="app-header">
       <div class="app-header__top">
         <div class="baner">
+          <div class="baner--backgraund"></div>
           <a href="#" class="baner__link">
             <svg width="22" height="22" class="baner__link--icon prepend">
               <use href="images/icons/icons-symbol.svg#ball-icon" />
@@ -745,6 +746,15 @@
               <li class="app-navbar__list--item"><a href="/contacts">Contact</a></li>
             </ul>
           </nav>
+
+          <button id="footer-button-top" class="app-button-top">
+            Got To Top
+            <div class="app-button-top--icon-container">
+              <svg width="34" height="34" class="app-button-top--icon">
+                <use href="images/icons/icons-symbol.svg#arrow-top-icon" />
+              </svg>
+            </div>
+          </button>
         </div>
 
         <div class="app-footer__bottom">
@@ -752,7 +762,7 @@
             <ul class="app-footer__contacts--list">
               <li class="list-item">
                 <a href="mailto:hello@squareup.com" class="list-item__link">
-                  <svg width="24" height="25" class="baner__link--icon prepend">
+                  <svg width="24" height="25" class="list-item__link--icon">
                     <use href="images/icons/icons-symbol.svg#mail-icon" />
                   </svg>
                   hello@squareup.com
@@ -760,7 +770,7 @@
               </li>
               <li class="list-item">
                 <a href="tel:+91 91813 23 2309" class="list-item__link">
-                  <svg width="24" height="25" class="baner__link--icon prepend">
+                  <svg width="24" height="25" class="list-item__link--icon">
                     <use href="images/icons/icons-symbol.svg#phone-icon" />
                   </svg>
                   +91 91813 23 2309
@@ -768,7 +778,7 @@
               </li>
               <li class="list-item">
                 <a href="tel:+91 91813 23 2309" class="list-item__link">
-                  <svg width="24" height="25" class="baner__link--icon prepend">
+                  <svg width="24" height="25" class="list-item__link--icon">
                     <use href="images/icons/icons-symbol.svg#location-icon" />
                   </svg>
                   Somewhere in the World
@@ -780,16 +790,16 @@
             <p>© 2025 Nutritionist. All rights reserved.</p>
           </div>
         </div>
-
-        <button id="button-top" class="app-button-top" style="--_persentage: 10%">
-          <div class="app-button-top--icon-container">
-            <svg width="34" height="34" class="app-button-top--icon">
-              <use href="images/icons/icons-symbol.svg#arrow-top-icon" />
-            </svg>
-          </div>
-        </button>
       </div>
     </footer>
+
+    <button id="button-top" class="app-button-top" aria-label="button top" hidden>
+      <div class="app-button-top--icon-container">
+        <svg width="34" height="34" class="app-button-top--icon">
+          <use href="images/icons/icons-symbol.svg#arrow-top-icon" />
+        </svg>
+      </div>
+    </button>
 
     <script type="module" src="/src/main.js"></script>
   </body>
