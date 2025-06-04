@@ -126,14 +126,15 @@ body:has(.app-main) {
 
         nav.mobile-menu {
             @media (max-width: 768px) {
+                display: none;
                 position: fixed;
                 inset: 0;
-                background-color: rgba(0, 0, 0, 0.7);
                 overflow-y: auto;
                 overflow-x: hidden;
+                background-color: rgba(0, 0, 0, 0.7);
                 z-index: 1000;
 
-                &.active {
+                &.open {
                     display: flex;
                     animation: translateLeftAnimation 0.3s ease-in-out forwards;
 
@@ -141,7 +142,8 @@ body:has(.app-main) {
                         animation: translateRightAnimation 0.3s 0.4s ease-in-out forwards;
                     }
                 }
-                &:not(.active) {
+                &.close {
+                    display: flex;
                     animation:
                         translateLeftAnimationRevers 0.3s 0.4s ease-in-out forwards,
                         displayNone 0s 0.8s ease-in-out forwards;

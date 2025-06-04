@@ -18,7 +18,12 @@ const buttonTop = new ButtonTop('#button-top', { offsetTop: 20, offsetBottom: 93
 buttonTop.init();
 
 function toggleMobileMenu() {
-  const isActive = elements.mobileMenu.component.classList.toggle('active');
+  const isActive = elements.mobileMenu.component.classList.toggle('open');
+  if (!isActive) {
+    elements.mobileMenu.component.classList.add('close');
+  } else {
+    elements.mobileMenu.component.classList.remove('close');
+  }
   document.body.style.overflow = isActive ? 'hidden' : '';
 }
 
