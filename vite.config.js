@@ -13,13 +13,13 @@ export default defineConfig({
     postcss: {
       plugins: [postcssNesting]
     }
+  },
+  build: {
+    rollupOptions: {
+      input: {
+        main: fileURLToPath(new URL('index.html', import.meta.url)),
+        devel: fileURLToPath(new URL('devel/index.html', import.meta.url))
+      }
+    }
   }
-  // build: {
-  //   rollupOptions: {
-  //     input: {
-  //       main: fileURLToPath(new URL('index.html', import.meta.url)),
-  //       devel: fileURLToPath(new URL('devel/index.html', import.meta.url))
-  //     }
-  //   }
-  // }
 });
