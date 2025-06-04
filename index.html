@@ -35,7 +35,11 @@
           <picture class="app-navbar__logo">
             <img src="images/logo-primary.svg" alt="Vite logo" class="app-navbar__logo--image" />
           </picture>
-          <nav aria-label="Main Navigation">
+          <nav
+            aria-label="Main Navigation"
+            data-menu-backdrop
+            class="app-navbar__list--wrapper mobile-menu"
+          >
             <ul class="app-navbar__list">
               <li class="app-navbar__list--item active"><a href="/">Home</a></li>
               <li class="app-navbar__list--item"><a href="/about">About</a></li>
@@ -48,6 +52,14 @@
               </li>
             </ul>
           </nav>
+
+          <button class="mobile-menu-button" aria-label="mobile menu">
+            <div class="mobile-menu-button__burger">
+              <span class="mobile-menu-button__burger--item"></span>
+              <span class="mobile-menu-button__burger--item"></span>
+              <span class="mobile-menu-button__burger--item"></span>
+            </div>
+          </button>
         </div>
       </div>
     </header>

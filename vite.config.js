@@ -1,6 +1,5 @@
 import { defineConfig } from 'vite';
 import { fileURLToPath, URL } from 'node:url';
-import { resolve } from 'node:path';
 
 import postcssNesting from 'postcss-nesting';
 
@@ -14,13 +13,13 @@ export default defineConfig({
     postcss: {
       plugins: [postcssNesting]
     }
-  },
-  build: {
-    rollupOptions: {
-      input: {
-        main: resolve(__dirname, 'index.html'),
-        devel: resolve(__dirname, 'devel/index.html')
-      }
-    }
   }
+  // build: {
+  //   rollupOptions: {
+  //     input: {
+  //       main: fileURLToPath(new URL('index.html', import.meta.url)),
+  //       devel: fileURLToPath(new URL('devel/index.html', import.meta.url))
+  //     }
+  //   }
+  // }
 });
